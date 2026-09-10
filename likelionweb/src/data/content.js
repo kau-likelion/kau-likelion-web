@@ -13,9 +13,9 @@ export const siteContent = {
     generation: 14,
     status: 'upcoming', // 'open', 'closed', 'upcoming'
     applicationPeriod: {
-      start: '02월 17일 (월) 13:00',
-      end: '03월 04일 (화) 13:00',
-      startDate: '2026-02-17T13:00:00',
+      start: '02월 11일 (수) 13:00',
+      end: '03월 04일 (수) 13:00',
+      startDate: '2026-02-11T13:00:00',
       endDate: '2026-03-04T13:00:00',
     },
     formUrl: 'https://forms.gle/7amaU9CRNZYBcpio9',
