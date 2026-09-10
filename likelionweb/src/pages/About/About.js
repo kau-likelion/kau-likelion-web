@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { pageTransition, staggerContainer, staggerItem, slideUp, slideInRight } from '../../styles/animations';
-import { management12th, management13th } from '../../data/management';
+import { management12th, management14th } from '../../data/management';
 import { siteContent } from '../../data/content';
 import ManagementCard from '../../components/sections/Management/ManagementCard';
 import {
@@ -71,7 +71,7 @@ function About() {
               <span>KAU</span>
               <BadgeDivider />
               <span>LIKELION</span>
-              <BadgeTag>13th</BadgeTag>
+              <BadgeTag>14th</BadgeTag>
             </FlightBadge>
 
             <BannerTitle>{organization.slogan}</BannerTitle>
@@ -139,7 +139,7 @@ function About() {
               </MetaItem>
               <MetaItem>
                 <MetaLabel>Arrival</MetaLabel>
-                <MetaValue>LIKELION 13th</MetaValue>
+                <MetaValue>LIKELION 14th</MetaValue>
               </MetaItem>
               <MetaItem>
                 <MetaLabel>Flight Date</MetaLabel>
@@ -158,8 +158,8 @@ function About() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <SectionIntro>2025 Boarding · 13기 운영진</SectionIntro>
-          <SectionTitle>LIKELION 13th Management</SectionTitle>
+          <SectionIntro>2026 Boarding · 14기 운영진</SectionIntro>
+          <SectionTitle>LIKELION 14th Management</SectionTitle>
         </SectionHeader>
 
         <ManagementGrid
@@ -170,7 +170,7 @@ function About() {
           viewport={{ once: true }}
           transition={{ delayChildren: 0.1 }}
         >
-          {management13th.map((person, index) => (
+          {management14th.map((person, index) => (
             <motion.div key={person.id} variants={staggerItem}>
               <ManagementCard person={person} index={index} />
             </motion.div>

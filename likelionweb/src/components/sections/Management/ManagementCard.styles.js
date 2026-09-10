@@ -20,7 +20,9 @@ export const CardContainer = styled.div`
 export const CardImage = styled.img`
   width: 100%;
   height: 250px;
-  object-fit: cover;
+  object-fit: ${({ $fitInside }) => $fitInside ? 'contain' : 'cover'};
+  padding: ${({ $fitInside }) => $fitInside ? '16px' : '0'};
+  box-sizing: border-box;
   display: block;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {

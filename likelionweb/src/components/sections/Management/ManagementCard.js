@@ -21,12 +21,22 @@ function ManagementCard({ person, index }) {
       whileHover="hover"
       style={{ transitionDelay: `${index * 0.05}s` }}
     >
-      <CardImage src={person.img} alt={person.name} loading="lazy" />
+      <CardImage
+        $fitInside={person.id === 'jimal_14'}
+        src={person.img || '/management-placeholder.svg'}
+        alt={person.name}
+        loading="lazy"
+        onError={(event) => {
+          if (!event.currentTarget.src.endsWith('/management-placeholder.svg')) {
+            event.currentTarget.src = '/management-placeholder.svg';
+          }
+        }}
+      />
       <CardContent>
         <CardName>{person.name}</CardName>
         <CardRole>{person.role}</CardRole>
         <CardDepartment>{person.department}</CardDepartment>
-        <GitHubLink
+        {person.github && <GitHubLink
           href={person.github}
           target="_blank"
           rel="noopener noreferrer"
@@ -36,7 +46,7 @@ function ManagementCard({ person, index }) {
           whileTap={{ scale: 0.95 }}
         >
           <FiGithub size={20} />
-        </GitHubLink>
+        </GitHubLink>}
       </CardContent>
     </CardContainer>
   );
